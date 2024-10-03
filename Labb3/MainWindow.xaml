@@ -1,0 +1,32 @@
+﻿<Window x:Class="Labb3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labb3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="12"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" Margin="0,0,0,10">
+            <MenuItem Header="Фон" Click="MenuItem_Click">
+                <MenuItem Header="Красный" Tag="Red" Click="ChangeBackgroundColor" ToolTip="Изменить цвет фона на красный"/>
+                <MenuItem Header="Зелёный" Tag="Green" Click="ChangeBackgroundColor" ToolTip="Изменить цвет фона на зеленый"/>
+                <MenuItem Header="Синий" Tag="Blue" Click="ChangeBackgroundColor" ToolTip="Изменить цвет фона на синий"/>
+                <Separator/>
+            </MenuItem>
+            <MenuItem Header="_О разработчике" Click="ShowDeveloperInfo" ToolTip="Показать информацию о разработчике"/>
+            <MenuItem Header="_Закрыть" Click="CloseWindow" ToolTip="Закрыть окно"/>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" Grid.Row="2" Margin="0,357,0,0">
+            <TextBlock Text="Сохранение документа ..." Width="145" />
+            <StatusBarItem HorizontalAlignment="Right" >
+                <TextBlock Text="Подключение к БД: ОК" Width="136" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
